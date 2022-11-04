@@ -15,7 +15,6 @@ const numberToSunday = 6 - weekDay;
     timeout: 0,
   });
 
-  //await page.waitForTimeout(5000);
   await page.waitForSelector('.titulo_composicao');
   const scrapingData = [];
 
