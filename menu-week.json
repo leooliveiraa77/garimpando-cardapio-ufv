@@ -1,0 +1,23 @@
+[
+  {
+    "weekDay": "Sexta",
+    "lunchMain": "Strogonoff de Frango",
+    "lunchGarrison": "Batata Palha",
+    "dinnerMain": "Picado Bovino Acebolado",
+    "dinnerGarrison": "Legumes na Manteiga"
+  },
+  {
+    "weekDay": "Sábado",
+    "lunchMain": "Frango Assado",
+    "lunchGarrison": "Macarronada",
+    "dinnerMain": "Bife Bovino Acebolado",
+    "dinnerGarrison": "Virado de Couve"
+  },
+  {
+    "weekDay": "Domingo",
+    "lunchMain": "Lombo ao Molho Rotty",
+    "lunchGarrison": "Creme de Milho",
+    "dinnerMain": "Cubos Bovino ao Molho Madeira",
+    "dinnerGarrison": "Purê Misto"
+  }
+]

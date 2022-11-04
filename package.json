@@ -1,0 +1,17 @@
+{
+  "name": "garimpando-menu-ufv",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "scraping-data",
+  "main": "main.js",
+  "dependencies": {
+    "@notionhq/client": "^2.2.2",
+    "dotenv": "^16.0.3",
+    "puppeteer": "^19.2.1"
+  },
+  "scripts": {
+    "start": "node ./main.js"
+  },
+  "author": "leonardo C",
+  "license": "ISC"
+}
