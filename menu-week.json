@@ -1,23 +1,46 @@
 [
   {
+    "weekDay": "Terça",
+    "lunchMain": "Lombo Assado ao Molho de Limão",
+    "lunchGarrison": "Legumes ao Alho",
+    "dinnerMain": "Carne Moída com Legumes",
+    "dinnerGarrison": "Polenta ao Sugo"
+  },
+  {
+    "weekDay": "Quarta",
+    "lunchMain": "Strogonoff Bovino",
+    "lunchGarrison": "Batata Rústica",
+    "dinnerMain": "Filé de Peixe à Dorê",
+    "dinnerGarrison": "Pirão / Pirão Vegano",
+    "juice": "Uva"
+  },
+  {
+    "weekDay": "Quinta",
+    "lunchMain": "Almôndega ao Sugo",
+    "lunchGarrison": "Fusilli ao Alho e Óleo",
+    "dinnerMain": "Filé de Frango Empanado",
+    "dinnerGarrison": "Creme de Milho"
+  },
+  {
     "weekDay": "Sexta",
-    "lunchMain": "Strogonoff de Frango",
-    "lunchGarrison": "Batata Palha",
-    "dinnerMain": "Picado Bovino Acebolado",
-    "dinnerGarrison": "Legumes na Manteiga"
+    "lunchMain": "Lombo Assado",
+    "lunchGarrison": "Farofa de Ovos",
+    "dinnerMain": "Linguiça Suína",
+    "dinnerGarrison": "Canjiquinha"
   },
   {
     "weekDay": "Sábado",
-    "lunchMain": "Frango Assado",
-    "lunchGarrison": "Macarronada",
-    "dinnerMain": "Bife Bovino Acebolado",
-    "dinnerGarrison": "Virado de Couve"
+    "lunchMain": "Frango Ensopado",
+    "lunchGarrison": "Angú",
+    "dinnerMain": "Lasanha à Bolonhesa",
+    "dinnerGarrison": "Jardineira de Legumes",
+    "juice": "Maracujá"
   },
   {
     "weekDay": "Domingo",
-    "lunchMain": "Lombo ao Molho Rotty",
-    "lunchGarrison": "Creme de Milho",
-    "dinnerMain": "Cubos Bovino ao Molho Madeira",
-    "dinnerGarrison": "Purê Misto"
+    "lunchMain": "Isca de Pernil com Calabresa",
+    "lunchGarrison": "Mandioca Ensopada",
+    "dinnerMain": "Frango com Quiabo",
+    "dinnerGarrison": "Polenta"
   }
 ]

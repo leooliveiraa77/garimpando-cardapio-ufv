@@ -1,5 +1,3 @@
-//const puppeteer = require('puppeteer');
-//const fs = require('fs');
 import puppeteer from 'puppeteer';
 import * as fs from 'fs';
 
@@ -10,9 +8,10 @@ const numberToSunday = 6 - weekDay;
 
 const scrapingData = [];
 let weekDayName;
+let nextWeekDay = 0;
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: true }); // { headless: false }
+  const browser = await puppeteer.launch(); // { headless: false }
   const page = await browser.newPage();
   //await page.setViewport({ width: 1920, height: 1080 });
   await page.goto('http://cardapio.ufv.br/', {
@@ -23,35 +22,34 @@ let weekDayName;
   await page.waitForSelector('.titulo_composicao');
 
   for (let i = day - 1; i <= day + numberToSunday; i++) {
-    let weekDayHandler = i + 1;
+    let weekDayHandler = weekDay + nextWeekDay;
 
     switch (weekDayHandler) {
-      case 0:
+      case 1:
         weekDayName = 'Segunda';
         break;
-      case 1:
+      case 2:
         weekDayName = 'Terça';
         break;
-      case 2:
+      case 3:
         weekDayName = 'Quarta';
         break;
-      case 3:
+      case 4:
         weekDayName = 'Quinta';
         break;
-      case 4:
+      case 5:
         weekDayName = 'Sexta';
         break;
-      case 5:
+      case 6:
         weekDayName = 'Sábado';
         break;
-      case 6:
+      case 0 || 7:
         weekDayName = 'Domingo';
         break;
     }
     const dayButtons = await page.$$('a.ui-state-default');
     await dayButtons[i].click();
     await page.waitForSelector('.titulo_composicao');
-    console.log(i + 1);
 
     const result = await page.$$eval('.titulo_composicao i', (menuDay) => menuDay.map((el) => el.innerText));
 
@@ -66,7 +64,7 @@ let weekDayName;
     if (result[14] === 'Uva' || result[14] === 'Maracujá') {
       weekDayMenu['juice'] = result[14];
     }
-
+    nextWeekDay++;
     scrapingData.push(weekDayMenu);
   }
 
