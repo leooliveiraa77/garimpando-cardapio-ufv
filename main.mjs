@@ -6,11 +6,11 @@ const weekDay = date.getDay();
 const day = date.getDate();
 const numberToSunday = 6 - weekDay;
 
-const scrapingData = [];
+export const scrapingData = [];
 let weekDayName;
 let nextWeekDay = 0;
 
-(async () => {
+export const scrapingHandler = async () => {
   const browser = await puppeteer.launch(); // { headless: false }
   const page = await browser.newPage();
   //await page.setViewport({ width: 1920, height: 1080 });
@@ -73,4 +73,4 @@ let nextWeekDay = 0;
     console.log('Well done!');
   });
   await browser.close();
-})();
+};

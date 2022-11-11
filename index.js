@@ -1,9 +1,12 @@
+#!/usr/bin/env node
 import { Client } from '@notionhq/client';
 import * as dotenv from 'dotenv';
-import { readFile } from 'fs/promises';
+//import { readFile } from 'fs/promises';
+import { scrapingHandler, scrapingData } from './main.mjs';
 dotenv.config({ path: './.env' });
 
-const jsonData = JSON.parse(await readFile(new URL('./menu-week.json', import.meta.url)));
+const jsonData = scrapingData;
+//const jsonData = JSON.parse(await readFile(new URL('./menu-week.json', import.meta.url))); Lendo o Json
 
 const notion = new Client({ auth: process.env.NOTION_KEY });
 
@@ -34,27 +37,27 @@ async function createMenu(menuObj) {
           },
         ],
       },
-      [process.env.NOTION_PAGE_ALMOCO]: {
+      [process.env.NOTION_PAGE_LUNCH]: {
         rich_text: [
           {
             type: 'text',
             text: {
-              content: `${menuObj.lunchMain} (${menuObj.lunchGarrison})`,
+              content: `${menuObj.lunchMain} ( ${menuObj.lunchGarrison} )`,
             },
           },
         ],
       },
-      [process.env.NOTION_PAGE_JANTAR]: {
+      [process.env.NOTION_PAGE_DINNER]: {
         rich_text: [
           {
             type: 'text',
             text: {
-              content: `${menuObj.dinnerMain} (${menuObj.dinnerGarrison})`,
+              content: `${menuObj.dinnerMain} ( ${menuObj.dinnerGarrison} )`,
             },
           },
         ],
       },
-      [process.env.NOTION_PAGE_SUCO]: {
+      [process.env.NOTION_PAGE_JUICE]: {
         rich_text: [
           {
             type: 'text',
@@ -64,7 +67,7 @@ async function createMenu(menuObj) {
           },
         ],
       },
-      [process.env.NOTION_PAGE_CLASSIDICAR]: {
+      [process.env.NOTION_PAGE_CLASSIFY]: {
         number: classificar,
       },
     },
@@ -77,4 +80,10 @@ async function sendDataToNotion() {
     classificar++;
   }
 }
-sendDataToNotion();
+
+const init = async () => {
+  await scrapingHandler();
+  await sendDataToNotion();
+};
+
+init();

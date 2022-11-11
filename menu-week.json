@@ -1,27 +1,5 @@
 [
   {
-    "weekDay": "Terça",
-    "lunchMain": "Lombo Assado ao Molho de Limão",
-    "lunchGarrison": "Legumes ao Alho",
-    "dinnerMain": "Carne Moída com Legumes",
-    "dinnerGarrison": "Polenta ao Sugo"
-  },
-  {
-    "weekDay": "Quarta",
-    "lunchMain": "Strogonoff Bovino",
-    "lunchGarrison": "Batata Rústica",
-    "dinnerMain": "Filé de Peixe à Dorê",
-    "dinnerGarrison": "Pirão / Pirão Vegano",
-    "juice": "Uva"
-  },
-  {
-    "weekDay": "Quinta",
-    "lunchMain": "Almôndega ao Sugo",
-    "lunchGarrison": "Fusilli ao Alho e Óleo",
-    "dinnerMain": "Filé de Frango Empanado",
-    "dinnerGarrison": "Creme de Milho"
-  },
-  {
     "weekDay": "Sexta",
     "lunchMain": "Lombo Assado",
     "lunchGarrison": "Farofa de Ovos",
